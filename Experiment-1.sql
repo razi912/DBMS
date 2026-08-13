@@ -56,3 +56,57 @@ values(123,'Stanford','CS','Y'),
 select * from apply
 
 drop table apply
+
+select sNAME,DoB from student
+
+select sNAME from student where GPA>3.7
+
+select sName from student where sizeHS>=100 AND DoB>'31-DEC-1996'
+
+select sName from student where GPA between 2.9 and 3.9
+
+select * from college where state = 'MA'
+
+select * from student where GPA>2.0 and gpa<3.5
+
+select * from student where DoB>'01-JUL-1996' order by DoB
+
+select sID,cNAME,decision from apply where decision='Y'
+
+select sID,cNAME from apply where cNAME ='Stanford'
+
+select * from college where enrollment>10001
+
+select * from college where state!='CA'
+
+select sName from student where sizeHS>17000 and gpa<3.8
+
+describe student
+
+select * from student
+
+select distinct major from apply
+
+select sNAME from student where sNAME like'___'
+
+select sName from student where sName like'H____'
+
+select sName from student where sName like'__e_e'
+
+select sName from student where sName like'%y'
+
+select * from student order by GPA
+
+select * from student order by GPA asc,DoB desc
+
+select sID from apply where cNAME IN('Stanford','Cornell','MIT')
+
+delete from apply where cNAME='Stanford'
+
+delete from college where cNAME = 'Stanford'
+
+update student set GPA = GPA*1.10
+
+update student set GPA = GPA+1.5 where GPA<3.5 and sizeHS>1500
+
+delete from student where GPA<3.2
